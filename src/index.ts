@@ -1,1 +1,3 @@
-document.write("Hello World!");
+import { Navimation } from "./navimation"; 
+
+module.exports.Navimation = Navimation ; 
