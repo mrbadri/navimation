@@ -4,8 +4,8 @@ const _ = require('lodash');
 
 export function animationDefault(animation: IAnimation): IAnimation {
     let initialState: IAnimation = { type: "line" },
-        newAnimation = _.cloneDeep(animation);
-        
+        newAnimation: IAnimation = _.cloneDeep(animation);
+
     if (!animation) {
         newAnimation = initialState;
     } else {

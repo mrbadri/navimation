@@ -47,7 +47,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\nfunction Navimation(input) {\n    console.log(input);\n    console.log((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input));\n    console.log((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input));\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input)) {\n        input = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\nfunction Navimation(input) {\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input)) {\n        input = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input);\n        console.log(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
 
 /***/ }),
 
@@ -69,7 +69,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputDefault\": () => (/* binding */ inputDefault)\n/* harmony export */ });\n/* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../animation */ \"./src/utils/default/animation/index.ts\");\n\nvar _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\nfunction inputDefault(input) {\n    var newInput = _.cloneDeep(input);\n    newInput.animation = (0,_animation__WEBPACK_IMPORTED_MODULE_0__.animationDefault)(newInput.animation);\n    return newInput;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/input/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputDefault\": () => (/* binding */ inputDefault)\n/* harmony export */ });\n/* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../animation */ \"./src/utils/default/animation/index.ts\");\n/* harmony import */ var _viewport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../viewport */ \"./src/utils/default/viewport/index.ts\");\n\n\nvar _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\nfunction inputDefault(input) {\n    var newInput = _.cloneDeep(input);\n    newInput.animation = (0,_animation__WEBPACK_IMPORTED_MODULE_0__.animationDefault)(input.animation);\n    newInput.viewport = (0,_viewport__WEBPACK_IMPORTED_MODULE_1__.viewportDefault)(input.viewport);\n    return newInput;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/input/index.ts?");
+
+/***/ }),
+
+/***/ "./src/utils/default/viewport/index.ts":
+/*!*********************************************!*\
+  !*** ./src/utils/default/viewport/index.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"viewportDefault\": () => (/* binding */ viewportDefault)\n/* harmony export */ });\nvar _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\nfunction viewportDefault(viewport) {\n    var initialState = { type: \"descktop\" }, newViewport = _.cloneDeep(viewport);\n    if (!viewport) {\n        newViewport = initialState;\n    }\n    else {\n        if (!viewport.type)\n            newViewport.type = initialState.type;\n    }\n    return newViewport;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/viewport/index.ts?");
 
 /***/ }),
 
