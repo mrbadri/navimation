@@ -1,3 +1,3 @@
-export interface IAnimation{
-    type?: string 
-}
+export interface IAnimation {
+    type?: string
+} 

@@ -36,7 +36,7 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n\n(0,_navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)({ navbar: \"ul\", item: \"li\" });\n// module.exports= {Navimation} ; \n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n\n(0,_navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)({ navbar: \"ul\", item: \"li\", animation: false });\n// module.exports= {Navimation} ; \n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationDefault\": () => (/* binding */ animationDefault)\n/* harmony export */ });\nvar _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\nfunction animationDefault(animation) {\n    var initialState = { type: \"line\" }, newAnimation = _.cloneDeep(animation);\n    if (!animation) {\n        newAnimation = initialState;\n    }\n    else {\n        if (!animation.type)\n            newAnimation.type = initialState.type;\n    }\n    return newAnimation;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/animation/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationDefault\": () => (/* binding */ animationDefault)\n/* harmony export */ });\nvar _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\nfunction animationDefault(animation) {\n    var initialState = { type: \"line\" }, newAnimation = _.cloneDeep(animation);\n    if (!newAnimation && newAnimation !== false) {\n        newAnimation = initialState;\n    }\n    else {\n        if (newAnimation == \"false\" || newAnimation === false)\n            return false;\n        if (!newAnimation.type)\n            newAnimation.type = initialState.type;\n    }\n    return newAnimation;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/animation/index.ts?");
 
 /***/ }),
 

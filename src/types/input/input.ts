@@ -4,6 +4,6 @@ import { IViewport } from "../viewport";
 export interface IInput {
     navbar: string,
     item: string,
-    animation?: IAnimation,
+    animation?: ( IAnimation | boolean ),
     viewport?: IViewport 
 }
