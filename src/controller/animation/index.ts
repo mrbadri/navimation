@@ -1,5 +1,7 @@
 import { IInput } from "../../types";
 
-export function animationController(input:IInput){
+const $ = require( "jquery" );
+
+export function animationController(input: IInput) {
 
 }

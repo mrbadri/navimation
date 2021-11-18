@@ -1,3 +1,4 @@
 export interface IAnimation {
-    type?: string
+    type?: string ,
+    event?: string
 } 
