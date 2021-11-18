@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    display: flex;
+    align-items: center;
+
+    background-color: green;
+    list-style-type: none;
+
+    width: 80%;
+    margin:10px auto;
+    padding: 0;
+}
+
+li{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    background-color: antiquewhite;
+
+    margin: 0 10px;
+}

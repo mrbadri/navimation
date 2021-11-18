@@ -29,6 +29,28 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 
 /***/ }),
 
+/***/ "./src/controller/animation/index.ts":
+/*!*******************************************!*\
+  !*** ./src/controller/animation/index.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationController\": () => (/* binding */ animationController)\n/* harmony export */ });\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationController(input) {\n    var animation = input.animation;\n    var element = document.createElement(\"div\");\n    $(element).prop(\"id\", \"navimation\");\n    $(element).css({\n        width: \"100px\",\n        height: \"2px\",\n        background: \"red\",\n        position: \"absolute\"\n    });\n    $(input.navbar).css({\n        position: \"relative\"\n    });\n    $(input.navbar).append(element);\n    console.log(element);\n    $(\"item\").on(animation.event, function () {\n    });\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/index.ts?");
+
+/***/ }),
+
+/***/ "./src/controller/index.ts":
+/*!*********************************!*\
+  !*** ./src/controller/index.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"controller\": () => (/* binding */ controller)\n/* harmony export */ });\n/* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animation */ \"./src/controller/animation/index.ts\");\n\nfunction controller(input) {\n    (0,_animation__WEBPACK_IMPORTED_MODULE_0__.animationController)(input);\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/index.ts?");
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
@@ -47,7 +69,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\nfunction Navimation(input) {\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input)) {\n        input = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input);\n        console.log(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controller */ \"./src/controller/index.ts\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\n\nfunction Navimation(input) {\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_1__.inputValidation)(input)) {\n        input = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.inputDefault)(input);\n        console.log(input);\n        (0,_controller__WEBPACK_IMPORTED_MODULE_0__.controller)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
 
 /***/ }),
 
