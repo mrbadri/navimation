@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\nfunction Navimation(inputs) {\n    console.log(\"test\");\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\nfunction Navimation(inputs) {\n    console.log(inputs);\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
 
 /***/ })
 

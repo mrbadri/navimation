@@ -1,5 +1,5 @@
-import {inputs} from "./types/inputs"
+import {IInputs} from "./types"
 
-export function Navimation(inputs: inputs): void{
-    console.log("test");
+export function Navimation(inputs: IInputs): void{
+    console.log(inputs);
 }
