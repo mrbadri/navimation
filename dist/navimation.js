@@ -36,7 +36,7 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n\n(0,_navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)({ navbar: \"ul\", item: \"li\", animation: false, viewport: false });\n// module.exports= {Navimation} ; \n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n\n(0,_navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)({ navbar: \"ul\", item: \"li\", viewport: false });\n// module.exports= {Navimation} ; \n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
 
 /***/ }),
 
