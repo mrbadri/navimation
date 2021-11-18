@@ -47,7 +47,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\nfunction Navimation(input) {\n    console.log(input);\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input)) {\n        input = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\nfunction Navimation(input) {\n    console.log(input);\n    console.log((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input));\n    console.log((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input));\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input)) {\n        input = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationDefault\": () => (/* binding */ animationDefault)\n/* harmony export */ });\nvar _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\nfunction animationDefault(animation) {\n    var initialState = { type: \"line\" }, newAnimation = _.cloneDeep(animation);\n    if (!animation.type)\n        newAnimation.type = initialState.type;\n    return newAnimation;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/animation/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationDefault\": () => (/* binding */ animationDefault)\n/* harmony export */ });\nvar _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\nfunction animationDefault(animation) {\n    var initialState = { type: \"line\" }, newAnimation = _.cloneDeep(animation);\n    if (!animation) {\n        newAnimation = initialState;\n    }\n    else {\n        if (!animation.type)\n            newAnimation.type = initialState.type;\n    }\n    return newAnimation;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/animation/index.ts?");
 
 /***/ }),
 
