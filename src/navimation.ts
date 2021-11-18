@@ -1,6 +1,5 @@
 import { IInput } from "./types"
-import { inputValidation } from "./utils";
-import { inputDefault } from "./utils/default/input";
+import { inputValidation , inputDefault } from "./utils";
 
 export function Navimation(input: IInput): void {
     console.log(input);

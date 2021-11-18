@@ -47,7 +47,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n/* harmony import */ var _utils_default_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/default/input */ \"./src/utils/default/input/index.ts\");\n\n\nfunction Navimation(input) {\n    console.log(input);\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input)) {\n        input = (0,_utils_default_input__WEBPACK_IMPORTED_MODULE_1__.inputDefault)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\nfunction Navimation(input) {\n    console.log(input);\n    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputValidation)(input)) {\n        input = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputDefault)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
 
 /***/ }),
 
@@ -80,7 +80,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputValidation\": () => (/* reexport safe */ _validation_input__WEBPACK_IMPORTED_MODULE_0__.inputValidation)\n/* harmony export */ });\n/* harmony import */ var _validation_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validation/input */ \"./src/utils/validation/input/index.ts\");\n\n\n\n//# sourceURL=webpack://navimation/./src/utils/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputValidation\": () => (/* reexport safe */ _validation_input__WEBPACK_IMPORTED_MODULE_0__.inputValidation),\n/* harmony export */   \"inputDefault\": () => (/* reexport safe */ _default_input__WEBPACK_IMPORTED_MODULE_1__.inputDefault)\n/* harmony export */ });\n/* harmony import */ var _validation_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validation/input */ \"./src/utils/validation/input/index.ts\");\n/* harmony import */ var _default_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./default/input */ \"./src/utils/default/input/index.ts\");\n\n\n\n\n//# sourceURL=webpack://navimation/./src/utils/index.ts?");
 
 /***/ }),
 
