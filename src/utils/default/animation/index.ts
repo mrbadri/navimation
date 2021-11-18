@@ -9,7 +9,7 @@ export function animationDefault(animation: (IAnimation | boolean)): (IAnimation
     if (!newAnimation && newAnimation !== false) {
         newAnimation = initialState;
     } else {
-        if (newAnimation == "false" || newAnimation === false)
+        if (newAnimation === "false" || newAnimation === false)
             return false;
 
         if (!newAnimation.type)

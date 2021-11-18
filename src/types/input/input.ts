@@ -5,5 +5,5 @@ export interface IInput {
     navbar: string,
     item: string,
     animation?: ( IAnimation | boolean ),
-    viewport?: IViewport 
+    viewport?: ( IViewport | boolean ) 
 }
