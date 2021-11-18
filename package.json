@@ -2,7 +2,7 @@
   "name": "navimation",
   "version": "2.0.0",
   "description": "",
-  "main" : "./dist/navimation.js" , 
+  "main": "./dist/navimation.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
@@ -21,7 +21,6 @@
   "dependencies": {
     "@babel/core": "^7.16.0",
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21",
     "typescript": "^4.4.4"
   }
 }

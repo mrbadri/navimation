@@ -1,10 +1,8 @@
 import { IViewport } from "../../../types/viewport";
 
-const _ = require('lodash');
-
 export function viewportDefault(viewport: (IViewport | boolean)): (IViewport | boolean) {
     let initialState: IViewport = { type: "default" },
-        newViewport: IViewport = _.cloneDeep(viewport);
+        newViewport: IViewport = viewport;
 
     if (!newViewport && newViewport !== false) {
         newViewport = initialState;

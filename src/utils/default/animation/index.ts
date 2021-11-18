@@ -1,10 +1,8 @@
 import { IAnimation } from "../../../types/animation";
 
-const _ = require('lodash');
-
 export function animationDefault(animation: (IAnimation | boolean)): (IAnimation | boolean) {
     let initialState: (IAnimation) = { type: "line", event: "mouseenter" },
-        newAnimation: (IAnimation) = _.cloneDeep(animation);
+        newAnimation: (IAnimation) = animation
 
     if (!newAnimation && newAnimation !== false) {
         newAnimation = initialState;
