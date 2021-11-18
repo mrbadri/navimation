@@ -1,1 +1,1 @@
-export * from "./validation/input"
+export * from "./validation/input";
