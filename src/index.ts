@@ -1,3 +1,5 @@
-import { Navimation } from "./navimation"; 
+import { Navimation } from "./navimation";
 
-module.exports.Navimation = Navimation ; 
+Navimation({ navbar: "ul", item: "li" })
+
+// module.exports= {Navimation} ; 
