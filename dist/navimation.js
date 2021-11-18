@@ -66,10 +66,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n\n(0,_navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)({ navbar: \"ul\", item: \"li\", viewport: false });\n// module.exports= {Navimation} ; \n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n/* module decorator */ module = __webpack_require__.hmd(module);\n\n(0,_navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)({ navbar: \"ul\", item: \"li\", viewport: false });\nmodule.exports = { Navimation: _navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation };\n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
 
 /***/ }),
 
@@ -204,6 +204,21 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		})();
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/harmony module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.hmd = (module) => {
+/******/ 			module = Object.create(module);
+/******/ 			if (!module.children) module.children = [];
+/******/ 			Object.defineProperty(module, 'exports', {
+/******/ 				enumerable: true,
+/******/ 				set: () => {
+/******/ 					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
+/******/ 				}
+/******/ 			});
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -233,7 +248,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
 /******/ 	
 /******/ })()
