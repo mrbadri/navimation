@@ -1,6 +1,7 @@
 import { IAnimation } from "./animation";
 import { IViewport } from "./viewport";
-export interface IInputs {
+
+export interface IInput {
     navbar: string,
     item: string,
     animation?: IAnimation,

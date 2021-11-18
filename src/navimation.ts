@@ -1,5 +1,8 @@
-import {IInputs} from "./types"
+import { IInput } from "./types"
+import { inputController } from "./utils";
 
-export function Navimation(inputs: IInputs): void{
-    console.log(inputs);
+export function Navimation(input: IInput): void {
+    console.log(input);
+
+    inputController(input);
 }

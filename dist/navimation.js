@@ -26,7 +26,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\nfunction Navimation(inputs) {\n    console.log(inputs);\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* binding */ Navimation)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils/index.ts\");\n\nfunction Navimation(input) {\n    console.log(input);\n    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.inputController)(input);\n}\n\n\n//# sourceURL=webpack://navimation/./src/navimation.ts?");
+
+/***/ }),
+
+/***/ "./src/utils/controller/input/index.ts":
+/*!*********************************************!*\
+  !*** ./src/utils/controller/input/index.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputController\": () => (/* binding */ inputController)\n/* harmony export */ });\nfunction inputController(input) {\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/controller/input/index.ts?");
+
+/***/ }),
+
+/***/ "./src/utils/index.ts":
+/*!****************************!*\
+  !*** ./src/utils/index.ts ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputController\": () => (/* reexport safe */ _controller_input__WEBPACK_IMPORTED_MODULE_0__.inputController)\n/* harmony export */ });\n/* harmony import */ var _controller_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controller/input */ \"./src/utils/controller/input/index.ts\");\n\n\n\n//# sourceURL=webpack://navimation/./src/utils/index.ts?");
 
 /***/ })
 
