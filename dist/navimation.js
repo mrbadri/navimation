@@ -36,7 +36,18 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationController\": () => (/* binding */ animationController)\n/* harmony export */ });\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationController(input) {\n    var animation = input.animation;\n    var element = document.createElement(\"div\");\n    $(element).prop(\"id\", \"navimation\");\n    $(element).css({\n        width: \"100px\",\n        height: \"2px\",\n        background: \"red\",\n        position: \"absolute\"\n    });\n    $(input.navbar).css({\n        position: \"relative\"\n    });\n    $(input.navbar).append(element);\n    console.log(element);\n    $(\"item\").on(animation.event, function () {\n    });\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationController\": () => (/* binding */ animationController)\n/* harmony export */ });\n/* harmony import */ var _line__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./line */ \"./src/controller/animation/line.ts\");\n\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationController(input) {\n    var animation = input.animation;\n    if (animation.type === \"line\") {\n        (0,_line__WEBPACK_IMPORTED_MODULE_0__.animationLine)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/index.ts?");
+
+/***/ }),
+
+/***/ "./src/controller/animation/line.ts":
+/*!******************************************!*\
+  !*** ./src/controller/animation/line.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationLine\": () => (/* binding */ animationLine)\n/* harmony export */ });\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationLine(input) {\n    var animation = input.animation;\n    var element = document.createElement(\"div\");\n    $(element).prop(\"id\", \"navimation\");\n    $(element).css({\n        position: \"absolute\",\n        bottom: \"0\",\n        width: \"0\",\n        height: \"3px\",\n        background: \"red\",\n        transform: \"scaleX(0)\",\n        transition: \"0.5s\"\n    });\n    $(input.navbar).css({\n        position: \"relative\"\n    });\n    $(input.navbar).append(element);\n    $(input.item).on(animation.event, function () {\n        $(element).css({\n            transform: \"scaleX(1)\",\n            width: $(this).outerWidth(),\n            left: $(this).offset().left - $(input.navbar).offset().left,\n        });\n    });\n    if (animation.event === \"mouseenter\") {\n        $(input.navbar).on(\"mouseleave\", function () {\n            $(element).css({\n                transform: \"scaleX(0)\",\n            });\n        });\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/line.ts?");
 
 /***/ }),
 
