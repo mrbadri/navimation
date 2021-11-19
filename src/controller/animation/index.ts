@@ -1,5 +1,6 @@
 import { IInput } from "../../types";
 import { IAnimation } from "../../types/animation";
+import { animationDote } from "./dote";
 import { animationLine } from "./line";
 import { animationRec } from "./rec";
 
@@ -13,4 +14,7 @@ export function animationController(input: IInput) {
 
     if (animation.type === "rec")
         animationRec(input);
+
+    if (animation.type === "dote")
+        animationDote(input);
 }

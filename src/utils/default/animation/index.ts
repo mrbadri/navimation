@@ -18,6 +18,8 @@ export function animationDefault(animation: (IAnimation | boolean)): (IAnimation
                 newAnimation.event = initialState.event;
             if (newAnimation.type === "rec")
                 newAnimation.event = "click";
+            if (newAnimation.type === "dote")
+                newAnimation.event = "click";
         }
 
     }
