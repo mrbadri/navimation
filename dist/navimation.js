@@ -26,7 +26,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationController\": () => (/* binding */ animationController)\n/* harmony export */ });\n/* harmony import */ var _line__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./line */ \"./src/controller/animation/line.ts\");\n\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationController(input) {\n    var animation = input.animation;\n    if (animation.type === \"line\") {\n        (0,_line__WEBPACK_IMPORTED_MODULE_0__.animationLine)(input);\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationController\": () => (/* binding */ animationController)\n/* harmony export */ });\n/* harmony import */ var _line__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./line */ \"./src/controller/animation/line.ts\");\n/* harmony import */ var _rec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rec */ \"./src/controller/animation/rec.ts\");\n\n\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationController(input) {\n    var animation = input.animation;\n    if (animation.type === \"line\")\n        (0,_line__WEBPACK_IMPORTED_MODULE_0__.animationLine)(input);\n    if (animation.type === \"rec\")\n        (0,_rec__WEBPACK_IMPORTED_MODULE_1__.animationRec)(input);\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/index.ts?");
 
 /***/ }),
 
@@ -38,6 +38,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationLine\": () => (/* binding */ animationLine)\n/* harmony export */ });\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationLine(input) {\n    var animation = input.animation;\n    var element = document.createElement(\"div\");\n    $(element).prop(\"id\", \"navimation\");\n    $(element).css({\n        position: \"absolute\",\n        bottom: \"0\",\n        width: \"0\",\n        height: \"3px\",\n        background: \"red\",\n        transform: \"scaleX(0)\",\n        transition: \"0.5s\"\n    });\n    $(input.navbar).css({\n        position: \"relative\"\n    });\n    $(input.navbar).append(element);\n    $(input.item).on(animation.event, function () {\n        $(element).css({\n            transform: \"scaleX(1)\",\n            width: $(this).outerWidth(),\n            left: $(this).offset().left - $(input.navbar).offset().left,\n        });\n    });\n    if (animation.event === \"mouseenter\") {\n        $(input.navbar).on(\"mouseleave\", function () {\n            $(element).css({\n                transform: \"scaleX(0)\",\n            });\n        });\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/line.ts?");
+
+/***/ }),
+
+/***/ "./src/controller/animation/rec.ts":
+/*!*****************************************!*\
+  !*** ./src/controller/animation/rec.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationRec\": () => (/* binding */ animationRec)\n/* harmony export */ });\nvar $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nfunction animationRec(input) {\n    var animation = input.animation;\n    var element = document.createElement(\"div\");\n    $(element).prop(\"id\", \"navimation\");\n    $(element).css({\n        position: \"absolute\",\n        bottom: \"0\",\n        top: \"0\",\n        width: \"0\",\n        height: \"auto\",\n        background: \"red\",\n        transition: \"0.5s\",\n        \"z-index\": \"1\"\n    });\n    $(input.navbar).css({\n        position: \"relative\"\n    });\n    $(input.navbar).append(element);\n    $(input.item).css({\n        \"z-index\": \"2\"\n    });\n    $(input.item).on(animation.event, function () {\n        $(element).css({\n            width: $(this).outerWidth(),\n            left: $(this).offset().left - $(input.navbar).offset().left,\n        });\n    });\n    if (animation.event === \"mouseenter\") {\n        $(input.navbar).on(\"mouseleave\", function () {\n            $(element).css({\n                width: \"0\"\n            });\n        });\n    }\n}\n\n\n//# sourceURL=webpack://navimation/./src/controller/animation/rec.ts?");
 
 /***/ }),
 
@@ -59,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* reexport safe */ _navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)\n/* harmony export */ });\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n\n// Navimation({ navbar: \"ul\", item: \"li\" , viewport: false })\n\n// module.exports.Navimation =  Navimation ;\n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* reexport safe */ _navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)\n/* harmony export */ });\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n\n(0,_navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)({ navbar: \"ul\", item: \"li\", animation: { type: \"rec\", event: \"mouseenter\" }, viewport: false });\n\n// module.exports.Navimation =  Navimation ;\n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
 
 /***/ }),
 
@@ -81,7 +92,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationDefault\": () => (/* binding */ animationDefault)\n/* harmony export */ });\nfunction animationDefault(animation) {\n    var initialState = { type: \"line\", event: \"mouseenter\" }, newAnimation = animation;\n    if (!newAnimation && newAnimation !== false) {\n        newAnimation = initialState;\n    }\n    else {\n        if (newAnimation === \"false\" || newAnimation === false)\n            return false;\n        if (!newAnimation.type)\n            newAnimation.type = initialState.type;\n        if (!newAnimation.event)\n            newAnimation.event = initialState.event;\n    }\n    return newAnimation;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/animation/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animationDefault\": () => (/* binding */ animationDefault)\n/* harmony export */ });\nfunction animationDefault(animation) {\n    var initialState = { type: \"line\", event: \"mouseenter\" }, newAnimation = animation;\n    if (!newAnimation && newAnimation !== false) {\n        newAnimation = initialState;\n    }\n    else {\n        if (newAnimation === \"false\" || newAnimation === false)\n            return false;\n        if (!newAnimation.type)\n            newAnimation.type = initialState.type;\n        if (!newAnimation.event) {\n            if (newAnimation.type === initialState.type)\n                newAnimation.event = initialState.event;\n            if (newAnimation.type === \"rec\")\n                newAnimation.event = \"click\";\n        }\n    }\n    return newAnimation;\n}\n\n\n//# sourceURL=webpack://navimation/./src/utils/default/animation/index.ts?");
 
 /***/ }),
 
