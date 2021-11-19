@@ -9,7 +9,7 @@ export function animationDote(input: IInput) {
     const element = document.createElement("div");
     const dote = document.createElement("span");
 
-    $(element).prop("id", "navimation")
+    $(element).prop("id", "navimation-box")
     $(element).css({
         position: "absolute",
         bottom: "0",

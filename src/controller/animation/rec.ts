@@ -7,7 +7,7 @@ export function animationRec(input: IInput) {
 
     const element = document.createElement("div");
 
-    $(element).prop("id", "navimation")
+    $(element).prop("id", "navimation-rec")
     $(element).css({
         position: "absolute",
         bottom: "0",
