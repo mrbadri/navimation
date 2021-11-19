@@ -2,7 +2,7 @@ import { IViewport } from "../../../types/viewport";
 
 export function viewportDefault(viewport: (IViewport | boolean)): (IViewport | boolean) {
     let initialState: IViewport = { type: "default" },
-        newViewport: IViewport = viewport;
+        newViewport: any = viewport;
 
     if (!newViewport && newViewport !== false) {
         newViewport = initialState;
