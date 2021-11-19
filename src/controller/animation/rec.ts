@@ -35,7 +35,7 @@ export function animationRec(input: IInput) {
         })
     })
 
-    if (animation.event === "mouseenter" ) {
+    if (animation.event === "mouseenter" || animation.event === "mouseenter") {
         $(input.navbar).on("mouseleave", function () {
             $(element).css({
                 width: "0"
