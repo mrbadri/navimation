@@ -3,6 +3,10 @@
   "version": "2.0.8",
   "description": "",
   "main": "./dist/navimation.js",
+  "types": "./dist/navimation.js",
+  "files": [
+      "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",

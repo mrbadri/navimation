@@ -2,6 +2,6 @@ import { Navimation } from "./navimation";
 
 // Navimation({ navbar: "ul", item: "li", animation: { type: "line", event:"mouseenter"}, viewport: false })
 
-// export { Navimation };
+export { Navimation };
 
-module.exports.Navimation = { Navimation };
+// module.exports.Navimation = { Navimation };
