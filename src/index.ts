@@ -1,6 +1,6 @@
 import { Navimation } from "./navimation";
 
-Navimation({ navbar: "ul", item: "li", animation: { type: "dote", event:"mouseenter"}, viewport: false })
+// Navimation({ navbar: "ul", item: "li", animation: { type: "line", event:"mouseenter"}, viewport: false })
 
 export { Navimation };
 
