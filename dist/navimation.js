@@ -81,7 +81,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Navimation\": () => (/* reexport safe */ _navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation)\n/* harmony export */ });\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n/* module decorator */ module = __webpack_require__.hmd(module);\n\n// Navimation({ navbar: \"ul\", item: \"li\", animation: { type: \"line\", event:\"mouseenter\"}, viewport: false })\n\nmodule.exports = { Navimation: _navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation };\n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navimation */ \"./src/navimation.ts\");\n/* module decorator */ module = __webpack_require__.hmd(module);\n\n// Navimation({ navbar: \"ul\", item: \"li\", animation: { type: \"line\", event:\"mouseenter\"}, viewport: false })\n// export { Navimation };\nmodule.exports = { Navimation: _navimation__WEBPACK_IMPORTED_MODULE_0__.Navimation };\n\n\n//# sourceURL=webpack://navimation/./src/index.ts?");
 
 /***/ }),
 
