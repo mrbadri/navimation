@@ -4,4 +4,4 @@ import { Navimation } from "./navimation";
 
 // export { Navimation };
 
-module.exports = { Navimation };
+module.exports.Navimation = { Navimation };
